@@ -1,5 +1,11 @@
 # NLP Explorer
 
+## Enlaces públicos
+
+- **Web interactiva:** https://drojas-7u7.github.io/nlp-explorer/
+- **Repositorio y materiales:** https://github.com/drojas-7u7/nlp-explorer
+
+
 Fundamentos de NLP moderno: tokenización avanzada y embeddings semánticos. El material combina una web conceptual y visual, live coding, un reto y soluciones de referencia. Esta guía sirve para preparar y recuperar la práctica; las explicaciones conceptuales están en la web.
 
 ## Materiales y orden de uso
