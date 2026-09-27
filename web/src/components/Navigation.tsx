@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 
-type NavigationLink = { label: string; href: string }
+type NavigationLink = { label: string; href: string; newTab?: boolean }
 type NavigationSection = NavigationLink & { children?: NavigationLink[] }
 
 // Añadir subsecciones solo cuando su destino esté implementado.
@@ -17,8 +17,8 @@ const sections: NavigationSection[] = [
     { label: 'Límites y cierre', href: '#cierre' },
   ] },
   { label: 'Exploraciones', href: '#exploraciones' },
-  { label: 'Recursos', href: '#recursos' },
-  { label: 'PDF', href: './NLP_Explorer.pdf' },
+  { label: 'Materiales', href: 'https://github.com/drojas-7u7/nlp-explorer', newTab: true },
+  { label: 'PDF', href: './NLP_Explorer.pdf', newTab: true },
 ]
 
 function NavigationItem({ section, open, setOpen, onNavigate }: {
@@ -67,7 +67,14 @@ function NavigationItem({ section, open, setOpen, onNavigate }: {
         if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false)
       }}>
       <div className="navigation-label">
-        <a href={section.href} onClick={() => { setOpen(false); onNavigate() }}>{section.label}</a>
+        <a
+          href={section.href}
+          target={section.newTab ? '_blank' : undefined}
+          rel={section.newTab ? 'noreferrer' : undefined}
+          onClick={() => { setOpen(false); onNavigate() }}
+        >
+          {section.label}
+        </a>
         {section.children && <button ref={buttonRef} type="button" className="navigation-toggle"
           aria-label={`Subsecciones de ${section.label}`} aria-expanded={open} aria-controls={panelId}
           onClick={() => setOpen(!open)}>
