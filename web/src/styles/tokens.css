@@ -1,0 +1,14 @@
+:root {
+  /* Candidata v2: pendiente de revisión humana. */
+  --color-bg: #233541;
+  --color-surface: #314955;
+  --color-text: #f5f1e8;
+  --color-text-muted: #bdcbd0;
+  --color-accent: #b1dede;
+  --color-warm: #e8b38e;
+  --color-line: #ffffff26;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --page-width: 1600px;
+}
