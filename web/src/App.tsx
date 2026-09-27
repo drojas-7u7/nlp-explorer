@@ -34,7 +34,9 @@ export default function App() {
         </main>
         <footer id="recursos" className="footer">
           <span>NLP EXPLORER <span className="footer-divider">/</span> Un primer vistazo al lenguaje</span>
-          <span id="pdf">Recursos y PDF · Próximamente</span>
+          <span id="pdf">
+            Recursos y PDF · <a href="./NLP_Explorer.pdf" target="_blank" rel="noreferrer">Abrir PDF</a>
+          </span>
         </footer>
       </div>
     </>

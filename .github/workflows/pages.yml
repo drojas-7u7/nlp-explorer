@@ -37,6 +37,9 @@ jobs:
         working-directory: web
         run: npm run build
 
+      - name: Add PDF to static site
+        run: cp pdf/NLP_Explorer.pdf web/dist/NLP_Explorer.pdf
+
       - name: Configure Pages
         uses: actions/configure-pages@v6
 

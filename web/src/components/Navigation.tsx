@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 
-type NavigationLink = { label: string; href: `#${string}` }
+type NavigationLink = { label: string; href: string }
 type NavigationSection = NavigationLink & { children?: NavigationLink[] }
 
 // Añadir subsecciones solo cuando su destino esté implementado.
@@ -18,7 +18,7 @@ const sections: NavigationSection[] = [
   ] },
   { label: 'Exploraciones', href: '#exploraciones' },
   { label: 'Recursos', href: '#recursos' },
-  { label: 'PDF', href: '#pdf' },
+  { label: 'PDF', href: './NLP_Explorer.pdf' },
 ]
 
 function NavigationItem({ section, open, setOpen, onNavigate }: {
